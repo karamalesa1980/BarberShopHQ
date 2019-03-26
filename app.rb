@@ -11,6 +11,9 @@ set :database, {adapter: "sqlite3", database: "barbershophq.sqlite3"}
 class Client < ActiveRecord::Base
 end
 
+class Barber < ActiveRecord::Base
+end
+
 get '/' do
   erb :index
 end
