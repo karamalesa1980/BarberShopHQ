@@ -28,4 +28,11 @@ ActiveRecord::Schema.define(version: 2019_03_26_190009) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.text "name"
+    t.text "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end

@@ -1,9 +1,7 @@
-<h1>Hello world!!</h1>
+<h2>Список парикмахеров:</h2>
 
-
-<%@barbers.each do |barber|%>
-	<p>
-		<%=barber.name%>
-	</p>
-<%end%>
-
+<ul>
+<% @barbers.each do |barber| %>
+  <li><a href="/barber/<%= barber.id %>"><%= barber.name %></a></li>
+<% end %>
+</ul>
