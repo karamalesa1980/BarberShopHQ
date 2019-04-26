@@ -2,25 +2,42 @@
 
 <form action="/visit" method="POST">
 
-  <p><label for="name">Ваше имя:</label></p>
-  <p><input type="text" name="client[name]" value="<%= @c.name %>"></p>
+ 
+   <div class="form-group">
+    <label for="exampleInputEmail1">Ваше имя</label>
+    <input name="client[name]" type="text" class="form-control" placeholder="Ваше имя" value="<%= @c.name %>">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your Name with anyone else.</small>
+  </div>
 
-  <p><label for="phone">Телефон:</label></p>
-  <p><input type="text" name="client[phone]" value="<%= @c.phone %>"></p>
+ 
+   <div class="form-group">
+    <label for="exampleInputEmail1">Ваш телефон</label>
+    <input name="client[phone]" type="text" class="form-control" placeholder="Ваш телефон" value="<%= @c.phone %>">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your Number phone with anyone else.</small>
+   </div>
 
-  <p><label for="datestamp">Выберите дату:</label></p>
-  <p><input type="text" name="client[datestamp]" value="<%= @c.datestamp %>"></p>
 
-  <p><label for="barber">Парикмахер:</label>
-    <select name="client[barber]">
-      <option value="" selected>Выбрать парикмахера...</option>
+ 
+  <div class="form-group">
+    <label for="exampleInputEmail1">Когда Вас ждать</label>
+    <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control" placeholder="Дата и время" value="<%= @c.datestamp %>">
+  
+  </div>
 
-      <% @barbers.each do |barber| %>
-      <option value="<%= barber.name %>"><%= barber.name %></option>
-      <% end %>
+  <div class="form-group">
+    <p><label for="barber">Парикмахер:</label>
+      <select name="client[barber]" class="form-control">
+        <option value="" selected>Выбрать парикмахера...</option>
 
-    </select>
-  </p>
+        <% @barbers.each do |barber| %>
+        <option value="<%= barber.name %>"><%= barber.name %></option>
+        <% end %>
+
+      </select>
+    </p>
+  </div>
+
+   
 
    <div class="form-group">
       <label for="exampleInputEmail1">Выберите цвет краски:</label>
@@ -43,6 +60,6 @@
     </div>
 
   <br>
-  <p><input type="submit" value="Отправить заявку"></p>
+  <p><button type="submit" class="btn btn-primary">Записаться</button></p>
 
 </form>
