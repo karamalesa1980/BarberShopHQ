@@ -30,10 +30,12 @@ end
 
 get '/' do
 
-	
-
-  erb :index
+	erb "Приветствуем Вас на нашем сайте!"
 end
+
+get '/index' do
+	erb :index
+end	
 
 get '/visit' do
 	@c = Client.new
