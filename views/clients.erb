@@ -6,6 +6,7 @@
     <th>Phone</th>
     <th>Date</th>
     <th>Barber</th>
+    <th>Color</th>
   </tr>
 
 <% @clients.each do |client| %>
@@ -14,6 +15,7 @@
     <td><%= client.phone %></td>
     <td><%= client.datestamp %></td>
     <td><%= client.barber %></td>
+    <td><%= client.color %></td>
   </tr>
 <% end %>
 </table>
