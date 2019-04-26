@@ -41,7 +41,7 @@
 
    <div class="form-group">
       <label for="exampleInputEmail1">Выберите цвет краски:</label>
-       <select name="client[color]">
+       <select id="colorpicker" name="client[color]">
           <option value="#7bd148">Green</option>
           <option value="#5484ed">Bold blue</option>
           <option value="#a4bdfc">Blue</option>
@@ -63,3 +63,17 @@
   <p><button type="submit" class="btn btn-primary">Записаться</button></p>
 
 </form>
+
+<script type="text/javascript">
+
+  $(function() {
+    $('select[id="colorpicker"]').simplecolorpicker();
+    $.datetimepicker.setLocale('ru');
+    $('#datetimepicker').datetimepicker();
+  });
+//  $('select[name="colorpicker"]').simplecolorpicker({
+//  picker: true
+//}).on('change', function() {
+//  $(document.body).css('background-color', $('select[name="colorpicker"]').val());
+//});
+</script>

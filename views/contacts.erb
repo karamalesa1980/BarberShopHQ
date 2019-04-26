@@ -4,12 +4,21 @@
 
 <form action="/contacts" method="POST">
 
-  <p><label for="name">Ваше имя:</label></p>
-  <p><input type="text" name="contact[name]" value="<%= @c.name %>"></p>
+  
+  <div class="form-group">
+    <label for="exampleInputEmail1">Ваш email</label>
+    <input name="contact[name]" type="email" class="form-control" placeholder="Ваш email" value="<%= @c.name %>">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your Email with anyone else.</small>
+  </div>
 
-  <p><label for="comment">Текст сообщения:</label></p>
-  <p><textarea rows="10" cols="45" name="contact[comment]"><%= @c.comment %></textarea></p>
+  
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Ваше сообщение!</label>
+    <textarea name="contact[comment]" type="text" class="form-control" id="exampleFormControlTextarea1" rows="3"><%= @c.comment %></textarea>
+  
+    <small id="emailHelp" class="form-text text-muted">We'll never share your Message with anyone else.</small>
+  </div>
 
-  <p><input type="submit" value="Отправить сообщение"></p>
+  <p><button type="submit" class="btn btn-primary">Отправить</button></p>
 
 </form>
